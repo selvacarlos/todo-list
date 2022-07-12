@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Header from "./Header";
 import ToDoList from "./ToDoList";
+import ToDoForm from "./ToDoForm";
 import data from "./data.json";
 
 function App() {
@@ -15,10 +16,24 @@ function App() {
     setToDoList(mapped);
   }
 
+  const handleFilter = () => {
+    let filtered = toDoList.filter(task => {
+      return !task.complete;
+    });
+    setToDoList(filtered);
+  }
+
+  const addTask = (userInput) => {
+    let copy = [...toDoList];
+    copy = [...copy, { id: toDoList.length + 1, task: userInput, complete: false }];
+    setToDoList(copy);
+  }
+
   return (
-    <div classNamade="App">
+    <div className="App">
       <Header />
-      <ToDoList toDoList={toDoList} handleToggle={handleToggle}/>
+      <ToDoList toDoList={toDoList} handleToggle={handleToggle} handleFilter={handleFilter}/>
+      <ToDoForm addTask={addTask}/>
     </div>
   );
 }
