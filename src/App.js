@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { format } from "date-fns";
 import logo from './logo.svg';
 import './App.css';
 import Header from "./Header";
@@ -25,13 +26,17 @@ function App() {
 
   const addTask = (userInput) => {
     let copy = [...toDoList];
-    copy = [...copy, { id: toDoList.length + 1, task: userInput, complete: false }];
+
+    var formattedDate = format(new Date(userInput.date), 'dd/mm/yyyy')
+
+    copy = [...copy, { id: toDoList.length + 1, task: userInput.task, dueDate: formattedDate, complete: false }];
     setToDoList(copy);
   }
 
   return (
     <div className="App">
       <Header />
+      <h3>hellooooo</h3>
       <ToDoList toDoList={toDoList} handleToggle={handleToggle} handleFilter={handleFilter}/>
       <ToDoForm addTask={addTask}/>
     </div>
