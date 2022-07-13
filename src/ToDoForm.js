@@ -1,22 +1,33 @@
 import React, { useState } from 'react';
 
-const ToDoForm = ({ addTask }) => {
+const initialValues = {
+  task: ""
+};
 
-  const [ userInput, setUserInput ] = useState('');
+const ToDoForm = ({ addTask, addDate }) => {
+
+  // const [ userInput, setUserInput ] = useState('');
+  // const [ dateInput, setDateInput ] = useState('');
+  const [ values, setValues ] = useState(initialValues);
 
   const handleChange = (e) => {
-    setUserInput(e.currentTarget.value)
+    const { name, value } = e.target;
+    setValues({
+      ...values,
+      [name]: value,
+    });
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addTask(userInput);
-    setUserInput("");
+    addTask(values);
+    // addDate(values.dueDate);
   }
 
   return (
     <form onSubmit={handleSubmit}>
-      <input value={userInput} type="text" onChange={handleChange} placeholder="Enter task..."/>
+      <input value={values.task} type="text" onChange={handleChange} name="task" placeholder="Enter task..."/>
+      <input value={values.dueDate} type="date" onChange={handleChange} name="date" placeholder="Enter due date..."/>
       <button>Submit</button>
     </form>
   );

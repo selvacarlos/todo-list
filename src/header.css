@@ -1,0 +1,9 @@
+#due-date {
+  float: left;
+  padding-left: 50px;
+}
+
+#to-do {
+  float: center;
+  padding-right: 130px;
+}

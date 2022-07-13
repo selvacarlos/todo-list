@@ -9,7 +9,10 @@ const ToDo = ({todo, handleToggle}) => {
 
   return (
     <div id={todo.id} key={todo.id + todo.task} name="todo" value={todo.id} onClick={handleClick} className={todo.complete ? "todo strike" : "todo"}>
-      {todo.task}
+      <div style={{ float: "left", paddingLeft: "50px", marginRight: "-130px" }}>
+        {todo.dueDate} 
+      </div>
+      {todo.task} 
     </div>
   )
 }
