@@ -27,9 +27,9 @@ function App() {
   const addTask = (userInput) => {
     let copy = [...toDoList];
 
-    var formattedDate = format(new Date(userInput.date), 'dd/mm/yyyy')
+    // var formattedDate = format(new Date(userInput.date), 'mm/dd/yyyy')
 
-    copy = [...copy, { id: toDoList.length + 1, task: userInput.task, dueDate: formattedDate, complete: false }];
+    copy = [...copy, { id: toDoList.length + 1, task: userInput.task, dueDate: userInput.date, complete: false }];
     setToDoList(copy);
   }
 

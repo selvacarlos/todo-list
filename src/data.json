@@ -2,50 +2,50 @@
   "id": 1,
   "task": "Give dog a bath",
   "complete": true,
-  "dueDate": null
+  "dueDate": "2323-07-04"
 }, {
   "id": 2,
   "task": "Do laundry",
   "complete": true,
-  "dueDate": null
+  "dueDate": "2343-07-04"
 }, {
   "id": 3,
   "task": "Vacuum floor",
   "complete": false,
-  "dueDate": null
+  "dueDate": "2323-07-04"
 }, {
   "id": 4,
   "task": "Feed cat",
   "complete": true,
-  "dueDate": null
+  "dueDate": "2723-07-04"
 }, {
   "id": 5,
   "task": "Change light bulbs",
   "complete": false,
-  "dueDate": null
+  "dueDate": "2000-07-11"
 }, {
   "id": 6,
   "task": "Go to Store",
   "complete": true,
-  "dueDate": null
+  "dueDate": "6223-07-04"
 }, {
   "id": 7,
   "task": "Fill gas tank",
   "complete": true,
-  "dueDate": null
+  "dueDate": "2303-07-04"
 }, {
   "id": 8,
   "task": "Change linens",
   "complete": false,
-  "dueDate": null
+  "dueDate": "2000-07-04"
 }, {
   "id": 9,
   "task": "Rake leaves",
   "complete": true,
-  "dueDate": null
+  "dueDate": "2023-07-04"
 }, {
   "id": 10,
   "task": "Bake Cookies",
   "complete": false,
-  "dueDate": "07/07/2013"
+  "dueDate": "2323-07-04"
 }]
