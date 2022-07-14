@@ -1,4 +1,5 @@
 import React from 'react'
+import { format } from "date-fns";
 
 const ToDo = ({todo, handleToggle}) => {
 
@@ -10,9 +11,9 @@ const ToDo = ({todo, handleToggle}) => {
   return (
     <div id={todo.id} key={todo.id + todo.task} name="todo" value={todo.id} onClick={handleClick} className={todo.complete ? "todo strike" : "todo"}>
       <div style={{ float: "left", paddingLeft: "50px", marginRight: "-130px" }}>
-        {todo.dueDate} 
+        {todo.dueDate}
       </div>
-      {todo.task} 
+      {todo.task}
     </div>
   )
 }

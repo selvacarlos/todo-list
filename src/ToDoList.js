@@ -2,9 +2,14 @@ import React from "react";
 import ToDo from "./ToDo";
 
 const ToDoList = ({toDoList, handleToggle, handleFilter}) => {
+
+  const numAscending = [...toDoList].sort((a, b) =>
+    a.dueDate > b.dueDate ? 1 : -1,
+  );
+
   return (
     <div>
-      {toDoList.map(todo => {
+      {numAscending.map(todo => {
         return (
           <ToDo todo={todo} handleToggle={handleToggle} handleFilter={handleFilter}/>
         )
